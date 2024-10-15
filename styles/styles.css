@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* base styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #000;
+  border-radius: 10px;
+  font-size: 1rem;
+  max-width: 4rem;
+  max-height: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* custom styles */
+.dropdown,
+.convert-button-wrapper {
+  margin: 1rem;
+  max-width: 10rem;
+  min-width: 7rem;
+  width: 100%;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+
+  /* Hide with transition */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+.btn-convert {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  justify-content: center;
+}
+
+.disabled {
+  color: #565656;
+  background-color: #323232;
+  border-color: #323232;
+  cursor: not-allowed;
+}
+
+.show {
+  max-height: 15rem;
+  opacity: 1;
+}
+
+.dropdown-item {
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+  transition-duration: 0.3s;
+}
+
+.selected::after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("../icons/check.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: center;
+}
+
+.dropdown-arrow {
+  transform: rotate(180deg);
+  transition-duration: 0.4s;
+}
+
+.rotate {
+  transform: rotate(0deg);
+  transition-duration: 0.4s;
+}
+
+.result-text {
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .header {
+    align-items: center;
+    flex-direction: column;
+  }
+}
